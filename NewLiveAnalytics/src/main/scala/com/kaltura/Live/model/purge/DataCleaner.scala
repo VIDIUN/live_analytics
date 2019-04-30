@@ -1,10 +1,10 @@
-package com.kaltura.Live.model.purge
+package com.vidiun.Live.model.purge
 
 import java.util.Date
 
-import com.kaltura.Live.infra.ConfigurationManager
-import com.kaltura.Live.model.Consts
-import com.kaltura.Live.utils.{BaseLog, MetaLog}
+import com.vidiun.Live.infra.ConfigurationManager
+import com.vidiun.Live.model.Consts
+import com.vidiun.Live.utils.{BaseLog, MetaLog}
 import org.apache.spark.SparkContext
 import com.datastax.spark.connector.cql.CassandraConnector
 import com.datastax.spark.connector.toSparkContextFunctions
@@ -44,7 +44,7 @@ class DataCleaner(sc: SparkContext) extends Serializable with MetaLog[BaseLog] {
   def removeProcessedLogFiles() {
 
     val dateBefore2Days = new Date(new Date().getTime() - 1 * 24 * 3600 * 1000L );
-    val processedFilesRows = sc.cassandraTable(Consts.KalturaKeySpace, "log_files")
+    val processedFilesRows = sc.cassandraTable(Consts.VidiunKeySpace, "log_files")
       .where("insert_time < ?", dateBefore2Days)
       .select("file_id")
     val filesCount = processedFilesRows.count()
@@ -54,8 +54,8 @@ class DataCleaner(sc: SparkContext) extends Serializable with MetaLog[BaseLog] {
       connector.withSessionDo {
         session => {
           partition.foreach { row =>
-            session.execute(s"DELETE FROM ${Consts.KalturaKeySpace}.log_data where file_id='${row.getString(0)}';")
-            session.execute(s"DELETE FROM ${Consts.KalturaKeySpace}.log_files where file_id='${row.getString(0)}';")
+            session.execute(s"DELETE FROM ${Consts.VidiunKeySpace}.log_data where file_id='${row.getString(0)}';")
+            session.execute(s"DELETE FROM ${Consts.VidiunKeySpace}.log_files where file_id='${row.getString(0)}';")
           }
         }
       }
@@ -66,7 +66,7 @@ class DataCleaner(sc: SparkContext) extends Serializable with MetaLog[BaseLog] {
   def removeLiveEvents() {
 
     val dateBefore2Days = new Date(new Date().getTime() - 36 * 3600 * 1000L );
-    val liveEventRows = sc.cassandraTable(Consts.KalturaKeySpace, "live_events")
+    val liveEventRows = sc.cassandraTable(Consts.VidiunKeySpace, "live_events")
       .where("event_time < ?", dateBefore2Days)
       .limit(ConfigurationManager.get("data_cleaner.max_num_of_rows_to_delete","1000").toLong)
       .select("entry_id","event_time")
@@ -78,8 +78,8 @@ class DataCleaner(sc: SparkContext) extends Serializable with MetaLog[BaseLog] {
       connector.withSessionDo {
         session => {
           partition.foreach { row =>
-            session.execute(s"DELETE FROM ${Consts.KalturaKeySpace}.live_events where entry_id='${row._1}' and event_time='${row._2}';")
-            session.execute(s"DELETE FROM ${Consts.KalturaKeySpace}.live_events_location where entry_id='${row._1}' and event_time='${row._2}';")
+            session.execute(s"DELETE FROM ${Consts.VidiunKeySpace}.live_events where entry_id='${row._1}' and event_time='${row._2}';")
+            session.execute(s"DELETE FROM ${Consts.VidiunKeySpace}.live_events_location where entry_id='${row._1}' and event_time='${row._2}';")
           }
         }
       }

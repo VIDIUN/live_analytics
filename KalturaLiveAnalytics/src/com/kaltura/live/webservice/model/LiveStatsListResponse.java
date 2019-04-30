@@ -1,4 +1,4 @@
-package com.kaltura.live.webservice.model;
+package com.vidiun.live.webservice.model;
 
 import java.util.Collection;
 

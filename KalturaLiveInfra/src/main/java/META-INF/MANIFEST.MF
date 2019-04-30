@@ -34,5 +34,5 @@ Class-Path: commons-collections-3.2.1.jar commons-math-2.1.jar tachyon
  f.jar jetty-xml-8.1.14.v20131031.jar chill-java-0.3.6.jar jackson-cor
  e-2.3.1.jar commons-io-2.4.jar commons-httpclient-3.1.jar xmlenc-0.52
  .jar oro-2.0.8.jar
-Main-Class: com.kaltura.live.SparkAggregation
+Main-Class: com.vidiun.live.SparkAggregation
 

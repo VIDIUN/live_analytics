@@ -1,10 +1,10 @@
-package com.kaltura.Live.infra
+package com.vidiun.Live.infra
 
 
 
-import com.kaltura.Live.model.dao.{BatchIdCF, LoggedFile, LoggedFilesCF}
-import com.kaltura.Live.model.parse.LiveEventParser
-import com.kaltura.Live.utils.{BaseLog, MetaLog}
+import com.vidiun.Live.model.dao.{BatchIdCF, LoggedFile, LoggedFilesCF}
+import com.vidiun.Live.model.parse.LiveEventParser
+import com.vidiun.Live.utils.{BaseLog, MetaLog}
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
 
@@ -13,7 +13,7 @@ import org.apache.spark.rdd.RDD
 
 //import org.apache.spark.sql.cassandra.CassandraSQLContext
 
-import com.kaltura.Live.model.LiveEvent
+import com.vidiun.Live.model.LiveEvent
 
 import scala.collection.immutable.List
 import scala.concurrent.Await
@@ -29,7 +29,7 @@ class EventsGenerator( val sc : SparkContext, val maxProcessFilesPerCycle : Int 
      //val cc = new CassandraSQLContext(sc)
 
 //     val cluster = Cluster.builder().addContactPoint(EnvParams.cassandraAddress).build()
-//     val session = cluster.connect(EnvParams.kalturaKeySpace)
+//     val session = cluster.connect(EnvParams.vidiunKeySpace)
 
      var batchId : Long = 0
 
@@ -43,7 +43,7 @@ class EventsGenerator( val sc : SparkContext, val maxProcessFilesPerCycle : Int 
 
      def getLastBatchId()
      {
-          //val rdd: SchemaRDD = cc.sql("SELECT * from kaltura_live.log_files WHERE batch_id=-1")
+          //val rdd: SchemaRDD = cc.sql("SELECT * from vidiun_live.log_files WHERE batch_id=-1")
 
           val batchIdCF = new BatchIdCF(SerializedSession.session)
           batchId = Await.result(batchIdCF.getBatchIdIfFound, scala.concurrent.duration.Duration.Inf).batch_id
@@ -69,7 +69,7 @@ class EventsGenerator( val sc : SparkContext, val maxProcessFilesPerCycle : Int 
 
      def get(aggrPrefix: String) : RDD[LiveEvent] =
      {
-          //val rdd: SchemaRDD = cc.sql( "SELECT file_id from kaltura_live.log_files WHERE batch_id=-1 ORDER BY insert_time LIMIT " + maxProcessFilesPerCycle.toString )
+          //val rdd: SchemaRDD = cc.sql( "SELECT file_id from vidiun_live.log_files WHERE batch_id=-1 ORDER BY insert_time LIMIT " + maxProcessFilesPerCycle.toString )
           //rdd.flatMap(row => fileIdToLines(row.getString(0) ) ).map(line => LiveEvent.parse(line) )
 
           var nonProcessedLoggedFilesList = getNonProcessedLoggedFiles()

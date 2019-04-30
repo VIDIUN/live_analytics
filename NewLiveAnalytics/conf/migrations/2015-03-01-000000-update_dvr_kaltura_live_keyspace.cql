@@ -1,4 +1,4 @@
-use kaltura_live;
+use vidiun_live;
 
 ALTER TABLE live_events ADD dvr_alive bigint;
 ALTER TABLE hourly_live_events ADD dvr_alive bigint;

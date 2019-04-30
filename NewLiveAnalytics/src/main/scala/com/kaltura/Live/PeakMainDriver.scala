@@ -1,10 +1,10 @@
-package com.kaltura.Live
+package com.vidiun.Live
 
 import com.google.common.base.Charsets
 import com.google.common.io.Resources
-import com.kaltura.Live.MainDriver._
-import com.kaltura.Live.infra.ConfigurationManager
-import com.kaltura.Live.model.aggregation.processors.PeakAudienceNewProcessor
+import com.vidiun.Live.MainDriver._
+import com.vidiun.Live.infra.ConfigurationManager
+import com.vidiun.Live.model.aggregation.processors.PeakAudienceNewProcessor
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 import org.joda.time.DateTime
@@ -31,7 +31,7 @@ object PeakMainDriver {
     "slf4j-api-1.6.4.jar",
     "jsr166e-1.1.0.jar")
 
-  val keyspace = "kaltura_live"
+  val keyspace = "vidiun_live"
 
   val baseFieldsList  = List(
     "event_time",

@@ -1,4 +1,4 @@
-package com.kaltura.city2Location;
+package com.vidiun.city2Location;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.kaltura.ip2location.Coordinate;
+import com.vidiun.ip2location.Coordinate;
 
 public class CityLocator {
 	

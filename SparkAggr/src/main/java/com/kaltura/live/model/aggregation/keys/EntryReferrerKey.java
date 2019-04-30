@@ -1,4 +1,4 @@
-package com.kaltura.live.model.aggregation.keys;
+package com.vidiun.live.model.aggregation.keys;
 
 import java.util.Date;
 

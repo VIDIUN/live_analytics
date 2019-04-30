@@ -1,8 +1,8 @@
-package com.kaltura.live.model.aggregation.functions.save;
+package com.vidiun.live.model.aggregation.functions.save;
 
-import com.kaltura.live.infra.cache.SerializableSession;
-import com.kaltura.live.model.aggregation.dao.LiveEntryReferrerEventDAO;
-import com.kaltura.live.model.aggregation.dao.LiveEventDAO;
+import com.vidiun.live.infra.cache.SerializableSession;
+import com.vidiun.live.model.aggregation.dao.LiveEntryReferrerEventDAO;
+import com.vidiun.live.model.aggregation.dao.LiveEventDAO;
 
 public class LiveEntryReferrerSave extends LiveEventSave {
 	

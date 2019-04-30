@@ -1,4 +1,4 @@
-package com.kaltura.live.infra.utils;
+package com.vidiun.live.infra.utils;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -57,9 +57,9 @@ public class LiveConfiguration {
 	}
 	
 	static protected String getConfigurationPath() {
-		String confPath = "/opt/kaltura";
-    	if (System.getenv().containsKey("KALTURA_CONF_PATH")) {
-    		confPath = System.getenv().get("KALTURA_CONF_PATH");
+		String confPath = "/opt/vidiun";
+    	if (System.getenv().containsKey("VIDIUN_CONF_PATH")) {
+    		confPath = System.getenv().get("VIDIUN_CONF_PATH");
     	}
     	return confPath + "/config.properties";
 	}

@@ -1,15 +1,15 @@
-package com.kaltura.Live.model.parse
+package com.vidiun.Live.model.parse
 
 
 import java.io.Serializable
 import java.net.URLDecoder
 import java.util.regex.Matcher
 import java.util.regex.Pattern
-import com.kaltura.Live.infra.ConfigurationManager
-import com.kaltura.Live.infra.utils.{RestRequestParser}
-import com.kaltura.Live.model.{Consts, LiveEvent}
-import com.kaltura.Live.utils.{BaseLog, MetaLog, DateUtils}
-import com.kaltura.ip2location.{Ip2LocationRecord, SerializableIP2LocationReader}
+import com.vidiun.Live.infra.ConfigurationManager
+import com.vidiun.Live.infra.utils.{RestRequestParser}
+import com.vidiun.Live.model.{Consts, LiveEvent}
+import com.vidiun.Live.utils.{BaseLog, MetaLog, DateUtils}
+import com.vidiun.ip2location.{Ip2LocationRecord, SerializableIP2LocationReader}
 
 // TODO - make SerializableIP2LocationReader class thread-safe (currently an instance is created on every call)
 object CountryCity extends Serializable with MetaLog[BaseLog]

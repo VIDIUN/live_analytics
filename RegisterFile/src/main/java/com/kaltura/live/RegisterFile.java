@@ -1,4 +1,4 @@
-package com.kaltura.live;
+package com.vidiun.live;
 
 import java.io.FileInputStream;
 import java.nio.ByteBuffer;
@@ -13,9 +13,9 @@ import com.datastax.driver.core.BoundStatement;
 import com.datastax.driver.core.PreparedStatement;
 import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
-import com.kaltura.live.infra.cache.SerializableSession;
-import com.kaltura.live.infra.exception.KalturaInternalException;
-import com.kaltura.live.infra.utils.DateUtils;
+import com.vidiun.live.infra.cache.SerializableSession;
+import com.vidiun.live.infra.exception.VidiunInternalException;
+import com.vidiun.live.infra.utils.DateUtils;
 
 public class RegisterFile {
 
@@ -49,10 +49,10 @@ public class RegisterFile {
 	    	//Date insertTime = getFileDateTime(key);
 			Long nullBatchId = -1L;
 			Date insertTime = new java.util.Date(System.currentTimeMillis() );
-	    	PreparedStatement statement = cassandraSession.getSession().prepare("INSERT INTO kaltura_live.log_data (file_id,data) VALUES (?, ?)");
+	    	PreparedStatement statement = cassandraSession.getSession().prepare("INSERT INTO vidiun_live.log_data (file_id,data) VALUES (?, ?)");
 	    	BoundStatement boundStatement = new BoundStatement(statement);
 	        cassandraSession.execute(boundStatement.bind(key,ByteBuffer.wrap(data)), RETRIES);
-	    	statement = cassandraSession.getSession().prepare("INSERT INTO kaltura_live.log_files (file_id,insert_time,batch_id) VALUES (?, ?, ?)");
+	    	statement = cassandraSession.getSession().prepare("INSERT INTO vidiun_live.log_files (file_id,insert_time,batch_id) VALUES (?, ?, ?)");
 	        boundStatement = new BoundStatement(statement);
 	        cassandraSession.execute(boundStatement.bind(key, insertTime, nullBatchId), RETRIES);
     	} catch (Exception ex) {
@@ -61,7 +61,7 @@ public class RegisterFile {
     }
 
     public byte[] readFromTable(String key) {
-        String q1 = "SELECT * FROM kaltura_live.log_data WHERE id = '"+key+"';";
+        String q1 = "SELECT * FROM vidiun_live.log_data WHERE id = '"+key+"';";
 
         ResultSet results = cassandraSession.getSession().execute(q1);
         for (Row row : results) {

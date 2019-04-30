@@ -1,12 +1,12 @@
-package com.kaltura.Live
+package com.vidiun.Live
 
 import com.datastax.spark.connector.cql.CassandraConnector
 import com.datastax.spark.connector.rdd.ValidRDDType
 import com.datastax.spark.connector.rdd.reader.RowReaderFactory
 import com.datastax.spark.connector.writer.RowWriterFactory
 import com.datastax.spark.connector.{toRDDFunctions, toSparkContextFunctions}
-import com.kaltura.Live.infra.ConfigurationManager
-import com.kaltura.Live.migration.SchemaMigrationCQL
+import com.vidiun.Live.infra.ConfigurationManager
+import com.vidiun.Live.migration.SchemaMigrationCQL
 import org.apache.spark.{SparkContext, SparkConf}
 import org.apache.log4j.Logger
 import scala.util.Try
@@ -20,7 +20,7 @@ object MigrationDriver {
 
   val log = Logger.getLogger(getClass.getName)
 
-  val liveKeyspace = "kaltura_live"
+  val liveKeyspace = "vidiun_live"
   var tableNameSuffix = ""
 
   case class LiveEvent               (entry_id: String, event_time: Long, alive: Long, dvr_alive: Long, bitrate: Long, bitrate_count: Long, buffer_time: Long, plays: Long)

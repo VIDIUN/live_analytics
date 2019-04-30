@@ -1,11 +1,11 @@
-package com.kaltura.live.model.logs.functions;
+package com.vidiun.live.model.logs.functions;
 
 import java.util.concurrent.TimeUnit;
 
 import org.apache.spark.api.java.function.Function;
 
-import com.kaltura.live.infra.utils.DateUtils;
-import com.kaltura.live.infra.utils.LiveConfiguration;
+import com.vidiun.live.infra.utils.DateUtils;
+import com.vidiun.live.infra.utils.LiveConfiguration;
 
 public class FilterOldFileIds implements Function<String, Boolean> {
 

@@ -1,2 +1,2 @@
-%GOPATH%bin\github-release.exe release -u kaltura -r live_analytics -t "v%LIVE_ANALYTICS_BUILD_NUMBER%" -n "Live Analytics V%LIVE_ANALYTICS_BUILD_NUMBER%" --draft -p
-%GOPATH%bin\github-release.exe upload -u kaltura -r live_analytics -t "v%LIVE_ANALYTICS_BUILD_NUMBER%" -n "KalturaLiveAnaltics##%LIVE_ANALYTICS_BUILD_NUMBER%.war" -f "KalturaLiveAnalytics/target/KalturaLiveAnaltics##%LIVE_ANALYTICS_BUILD_NUMBER%.war"
+%GOPATH%bin\github-release.exe release -u vidiun -r live_analytics -t "v%LIVE_ANALYTICS_BUILD_NUMBER%" -n "Live Analytics V%LIVE_ANALYTICS_BUILD_NUMBER%" --draft -p
+%GOPATH%bin\github-release.exe upload -u vidiun -r live_analytics -t "v%LIVE_ANALYTICS_BUILD_NUMBER%" -n "VidiunLiveAnaltics##%LIVE_ANALYTICS_BUILD_NUMBER%.war" -f "VidiunLiveAnalytics/target/VidiunLiveAnaltics##%LIVE_ANALYTICS_BUILD_NUMBER%.war"

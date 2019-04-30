@@ -1,8 +1,8 @@
-package com.kaltura.Live.model
+package com.vidiun.Live.model
 
 import java.util.regex.Pattern
 
-import com.kaltura.Live.utils.{BaseLog, MetaLog, DateUtils}
+import com.vidiun.Live.utils.{BaseLog, MetaLog, DateUtils}
 
 
 trait LiveEventWrapBase extends Serializable {

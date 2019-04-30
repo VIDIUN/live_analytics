@@ -1,4 +1,4 @@
-package com.kaltura.live.webservice.model;
+package com.vidiun.live.webservice.model;
 
 import javax.xml.bind.annotation.XmlSeeAlso;
 
@@ -109,7 +109,7 @@ public class LiveStats {
 
 	@Override
 	public String toString() {
-		return "KalturaLiveStats [plays=" + plays + ", audience=" + audience + ", dvrAudience=" + dvrAudience
+		return "VidiunLiveStats [plays=" + plays + ", audience=" + audience + ", dvrAudience=" + dvrAudience
 				+ ", secondsViewed=" + secondsViewed + ", bufferTime="
 				+ bufferTime + ", avgBitrate=" + avgBitrate + ", timestamp="
 				+ timestamp + "]";

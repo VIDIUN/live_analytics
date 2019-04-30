@@ -1,4 +1,4 @@
-package com.kaltura.Live.migration
+package com.vidiun.Live.migration
 
 /**
  * Created by ofirk on 4/16/15.
@@ -6,7 +6,7 @@ package com.kaltura.Live.migration
 object SchemaMigrationCQL {
   val BackupTablesCreationScript = Array(
     """
-      CREATE TABLE IF NOT EXISTS kaltura_live.live_events_backup (
+      CREATE TABLE IF NOT EXISTS vidiun_live.live_events_backup (
       	entry_id text,
       	event_time timestamp,
       	plays bigint,
@@ -20,7 +20,7 @@ object SchemaMigrationCQL {
       WITH CLUSTERING ORDER BY (event_time DESC);
     """,
     """
-      CREATE TABLE IF NOT EXISTS kaltura_live.hourly_live_events_backup (
+      CREATE TABLE IF NOT EXISTS vidiun_live.hourly_live_events_backup (
       	entry_id text,
       	event_time timestamp,
       	plays bigint,
@@ -34,7 +34,7 @@ object SchemaMigrationCQL {
       WITH CLUSTERING ORDER BY (event_time DESC);
     """,
     """
-      CREATE TABLE IF NOT EXISTS kaltura_live.live_events_location_backup (
+      CREATE TABLE IF NOT EXISTS vidiun_live.live_events_location_backup (
       	entry_id text,
       	event_time timestamp,
       	country text,
@@ -48,7 +48,7 @@ object SchemaMigrationCQL {
       	PRIMARY KEY ((entry_id,event_time), country, city));
     """,
     """
-      CREATE TABLE IF NOT EXISTS kaltura_live.hourly_live_events_partner_backup (
+      CREATE TABLE IF NOT EXISTS vidiun_live.hourly_live_events_partner_backup (
       	partner_id int,
       	event_time timestamp,
       	plays bigint,
@@ -62,7 +62,7 @@ object SchemaMigrationCQL {
       WITH CLUSTERING ORDER BY (event_time DESC);
     """,
     """
-      CREATE TABLE IF NOT EXISTS kaltura_live.hourly_live_events_referrer_backup (
+      CREATE TABLE IF NOT EXISTS vidiun_live.hourly_live_events_referrer_backup (
       	entry_id text,
       	event_time timestamp,
       	referrer text,
@@ -76,7 +76,7 @@ object SchemaMigrationCQL {
     """)
   val TestTablesCreationScript = Array(
     """
-      CREATE TABLE IF NOT EXISTS kaltura_live.live_events_test (
+      CREATE TABLE IF NOT EXISTS vidiun_live.live_events_test (
         entry_id text,
         event_time timestamp,
         plays counter,
@@ -90,7 +90,7 @@ object SchemaMigrationCQL {
       WITH CLUSTERING ORDER BY (event_time DESC);
     """,
     """
-      CREATE TABLE IF NOT EXISTS kaltura_live.hourly_live_events_test (
+      CREATE TABLE IF NOT EXISTS vidiun_live.hourly_live_events_test (
         entry_id text,
         event_time timestamp,
         plays counter,
@@ -104,7 +104,7 @@ object SchemaMigrationCQL {
       WITH CLUSTERING ORDER BY (event_time DESC);
     """,
     """
-      CREATE TABLE IF NOT EXISTS kaltura_live.live_events_location_test (
+      CREATE TABLE IF NOT EXISTS vidiun_live.live_events_location_test (
         entry_id text,
         event_time timestamp,
         country text,
@@ -118,7 +118,7 @@ object SchemaMigrationCQL {
         PRIMARY KEY ((entry_id,event_time), country, city));
     """,
     """
-      CREATE TABLE IF NOT EXISTS kaltura_live.hourly_live_events_partner_test (
+      CREATE TABLE IF NOT EXISTS vidiun_live.hourly_live_events_partner_test (
         partner_id int,
         event_time timestamp,
         plays counter,
@@ -132,7 +132,7 @@ object SchemaMigrationCQL {
       WITH CLUSTERING ORDER BY (event_time DESC);
     """,
     """
-      CREATE TABLE IF NOT EXISTS kaltura_live.hourly_live_events_referrer_test (
+      CREATE TABLE IF NOT EXISTS vidiun_live.hourly_live_events_referrer_test (
         entry_id text,
         event_time timestamp,
         referrer text,
@@ -145,15 +145,15 @@ object SchemaMigrationCQL {
         PRIMARY KEY ((entry_id,event_time), referrer));
     """)
   val TablesDropScript = Array(
-    "DROP TABLE kaltura_live.live_events;",
-    "DROP TABLE kaltura_live.hourly_live_events;",
-    "DROP TABLE kaltura_live.live_events_location;",
-    "DROP TABLE kaltura_live.hourly_live_events_partner;",
-    "DROP TABLE kaltura_live.hourly_live_events_referrer;"
+    "DROP TABLE vidiun_live.live_events;",
+    "DROP TABLE vidiun_live.hourly_live_events;",
+    "DROP TABLE vidiun_live.live_events_location;",
+    "DROP TABLE vidiun_live.hourly_live_events_partner;",
+    "DROP TABLE vidiun_live.hourly_live_events_referrer;"
   )
   val TablesCreationScript = Array(
     """
-      CREATE TABLE IF NOT EXISTS kaltura_live.live_events (
+      CREATE TABLE IF NOT EXISTS vidiun_live.live_events (
         entry_id text,
         event_time timestamp,
         plays counter,
@@ -167,7 +167,7 @@ object SchemaMigrationCQL {
       WITH CLUSTERING ORDER BY (event_time DESC);
     """,
     """
-      CREATE TABLE IF NOT EXISTS kaltura_live.hourly_live_events (
+      CREATE TABLE IF NOT EXISTS vidiun_live.hourly_live_events (
         entry_id text,
         event_time timestamp,
         plays counter,
@@ -181,7 +181,7 @@ object SchemaMigrationCQL {
       WITH CLUSTERING ORDER BY (event_time DESC);
     """,
     """
-      CREATE TABLE IF NOT EXISTS kaltura_live.live_events_location (
+      CREATE TABLE IF NOT EXISTS vidiun_live.live_events_location (
         entry_id text,
         event_time timestamp,
         country text,
@@ -195,7 +195,7 @@ object SchemaMigrationCQL {
         PRIMARY KEY ((entry_id,event_time), country, city));
     """,
     """
-      CREATE TABLE IF NOT EXISTS kaltura_live.hourly_live_events_partner (
+      CREATE TABLE IF NOT EXISTS vidiun_live.hourly_live_events_partner (
         partner_id int,
         event_time timestamp,
         plays counter,
@@ -209,7 +209,7 @@ object SchemaMigrationCQL {
       WITH CLUSTERING ORDER BY (event_time DESC);
     """,
     """
-      CREATE TABLE IF NOT EXISTS kaltura_live.hourly_live_events_referrer (
+      CREATE TABLE IF NOT EXISTS vidiun_live.hourly_live_events_referrer (
         entry_id text,
         event_time timestamp,
         referrer text,

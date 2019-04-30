@@ -7,15 +7,15 @@
         </listener-class>
     </listener>
     <servlet>
-        <servlet-name>KalturaLiveAnalytics</servlet-name>
+        <servlet-name>VidiunLiveAnalytics</servlet-name>
         <servlet-class>
         	com.sun.xml.ws.transport.http.servlet.WSServlet
         </servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>KalturaLiveAnalytics</servlet-name>
-        <url-pattern>/KalturaLiveAnalytics</url-pattern>
+        <servlet-name>VidiunLiveAnalytics</servlet-name>
+        <url-pattern>/VidiunLiveAnalytics</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>120</session-timeout>

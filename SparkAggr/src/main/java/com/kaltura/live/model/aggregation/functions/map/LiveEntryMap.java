@@ -1,9 +1,9 @@
-package com.kaltura.live.model.aggregation.functions.map;
+package com.vidiun.live.model.aggregation.functions.map;
 
 
-import com.kaltura.live.model.aggregation.StatsEvent;
-import com.kaltura.live.model.aggregation.keys.EntryKey;
-import com.kaltura.live.model.aggregation.keys.EventKey;
+import com.vidiun.live.model.aggregation.StatsEvent;
+import com.vidiun.live.model.aggregation.keys.EntryKey;
+import com.vidiun.live.model.aggregation.keys.EventKey;
 
 import scala.Tuple2;
 

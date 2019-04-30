@@ -1,4 +1,4 @@
-package com.kaltura.live.model.aggregation.threads;
+package com.vidiun.live.model.aggregation.threads;
 
 import java.io.Serializable;
 
@@ -7,13 +7,13 @@ import org.apache.spark.api.java.JavaRDD;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.kaltura.live.model.aggregation.StatsEvent;
-import com.kaltura.live.model.aggregation.filter.StatsEventsHourlyFilter;
-import com.kaltura.live.model.aggregation.filter.StatsEventsFilter;
-import com.kaltura.live.model.aggregation.functions.map.LiveEventMap;
-import com.kaltura.live.model.aggregation.functions.reduce.LiveEventReduce;
-import com.kaltura.live.model.aggregation.functions.save.LiveEventSave;
-import com.kaltura.live.model.aggregation.keys.EventKey;
+import com.vidiun.live.model.aggregation.StatsEvent;
+import com.vidiun.live.model.aggregation.filter.StatsEventsHourlyFilter;
+import com.vidiun.live.model.aggregation.filter.StatsEventsFilter;
+import com.vidiun.live.model.aggregation.functions.map.LiveEventMap;
+import com.vidiun.live.model.aggregation.functions.reduce.LiveEventReduce;
+import com.vidiun.live.model.aggregation.functions.save.LiveEventSave;
+import com.vidiun.live.model.aggregation.keys.EventKey;
 
 /**
  * This thread is responsible for aggregating results over a given event list and save them

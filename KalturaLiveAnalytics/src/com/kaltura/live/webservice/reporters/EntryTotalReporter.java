@@ -1,4 +1,4 @@
-package com.kaltura.live.webservice.reporters;
+package com.vidiun.live.webservice.reporters;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,15 +9,15 @@ import java.util.Map.Entry;
 
 import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
-import com.kaltura.live.infra.utils.DateUtils;
-import com.kaltura.live.model.aggregation.dao.LiveEntryEventDAO;
-import com.kaltura.live.model.aggregation.dao.LiveEntryPeakDAO;
-import com.kaltura.live.webservice.model.AnalyticsException;
-import com.kaltura.live.webservice.model.EntryLiveStats;
-import com.kaltura.live.webservice.model.LiveReportInputFilter;
-import com.kaltura.live.webservice.model.LiveReportPager;
-import com.kaltura.live.webservice.model.LiveStats;
-import com.kaltura.live.webservice.model.LiveStatsListResponse;
+import com.vidiun.live.infra.utils.DateUtils;
+import com.vidiun.live.model.aggregation.dao.LiveEntryEventDAO;
+import com.vidiun.live.model.aggregation.dao.LiveEntryPeakDAO;
+import com.vidiun.live.webservice.model.AnalyticsException;
+import com.vidiun.live.webservice.model.EntryLiveStats;
+import com.vidiun.live.webservice.model.LiveReportInputFilter;
+import com.vidiun.live.webservice.model.LiveReportPager;
+import com.vidiun.live.webservice.model.LiveStats;
+import com.vidiun.live.webservice.model.LiveStatsListResponse;
 
 public class EntryTotalReporter extends BaseReporter {
 	
@@ -34,7 +34,7 @@ public class EntryTotalReporter extends BaseReporter {
 	
 	protected String generatePastEntryQuery(LiveReportInputFilter filter) {
 		StringBuffer sb = new StringBuffer();
-		sb.append("select * from kaltura_live.hourly_live_events where ");
+		sb.append("select * from vidiun_live.hourly_live_events where ");
 		sb.append(addEntryIdsCondition(filter.getEntryIds()));
 		sb.append(" and ");
 		sb.append(addTimeRangeCondition(DateUtils.roundDate(filter.getFromTime()), DateUtils.roundDate(filter.getToTime())));
@@ -87,7 +87,7 @@ public class EntryTotalReporter extends BaseReporter {
 		
 		
 		StringBuffer sb = new StringBuffer();
-		sb.append("select * from kaltura_live.live_events where ");
+		sb.append("select * from vidiun_live.live_events where ");
 		sb.append(addEntryIdsCondition(filter.getEntryIds()));
 		sb.append(" and ");
 		sb.append(addTimeRangeCondition(DateUtils.roundDate(filter.getFromTime()), DateUtils.roundDate(filter.getToTime())));
@@ -130,7 +130,7 @@ public class EntryTotalReporter extends BaseReporter {
 	
 	protected String generatePeakAudienceQuery(LiveReportInputFilter filter) {
 		StringBuffer sb = new StringBuffer();
-		sb.append("select * from kaltura_live.live_entry_hourly_peak where ");
+		sb.append("select * from vidiun_live.live_entry_hourly_peak where ");
 		sb.append(addEntryIdsCondition(filter.getEntryIds()));
 		sb.append(" and ");
 		sb.append(addTimeRangeCondition(DateUtils.roundDate(filter.getFromTime()), DateUtils.roundDate(filter.getToTime())));

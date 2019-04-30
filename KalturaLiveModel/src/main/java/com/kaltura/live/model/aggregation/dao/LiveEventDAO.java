@@ -1,4 +1,4 @@
-package com.kaltura.live.model.aggregation.dao;
+package com.vidiun.live.model.aggregation.dao;
 
 import java.util.ArrayList;
 import java.util.Arrays;

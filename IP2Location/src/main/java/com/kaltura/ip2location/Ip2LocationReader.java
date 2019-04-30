@@ -1,4 +1,4 @@
-package com.kaltura.ip2location;
+package com.vidiun.ip2location;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.net.UnknownHostException;

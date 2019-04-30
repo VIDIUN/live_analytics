@@ -1,4 +1,4 @@
-package com.kaltura.live.model.aggregation;
+package com.vidiun.live.model.aggregation;
 
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
@@ -12,10 +12,10 @@ import java.util.regex.Pattern;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.kaltura.live.infra.utils.DateUtils;
-import com.kaltura.live.infra.utils.RequestUtils;
-import com.kaltura.ip2location.Ip2LocationRecord;
-import com.kaltura.ip2location.SerializableIP2LocationReader;
+import com.vidiun.live.infra.utils.DateUtils;
+import com.vidiun.live.infra.utils.RequestUtils;
+import com.vidiun.ip2location.Ip2LocationRecord;
+import com.vidiun.ip2location.SerializableIP2LocationReader;
 
 /**
  *	Represents a single stats event 

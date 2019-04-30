@@ -1,4 +1,4 @@
-package com.kaltura.Live.model.parse
+package com.vidiun.Live.model.parse
 
 import org.scalatest.FunSuite
 

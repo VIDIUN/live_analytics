@@ -1,7 +1,7 @@
-package com.kaltura.live.webservice.reporters;
+package com.vidiun.live.webservice.reporters;
 
-import com.kaltura.city2Location.CityLocator;
-import com.kaltura.country2location.CountryLocator;
+import com.vidiun.city2Location.CityLocator;
+import com.vidiun.country2location.CountryLocator;
 
 public class GeographicalLocatorsCache {
 	

@@ -1,4 +1,4 @@
-package com.kaltura.live.model.aggregation.functions.save;
+package com.vidiun.live.model.aggregation.functions.save;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -7,10 +7,10 @@ import org.apache.spark.api.java.function.FlatMapFunction;
 
 import scala.Tuple2;
 
-import com.kaltura.live.infra.cache.SerializableSession;
-import com.kaltura.live.model.aggregation.StatsEvent;
-import com.kaltura.live.model.aggregation.dao.LiveEventDAO;
-import com.kaltura.live.model.aggregation.keys.EventKey;
+import com.vidiun.live.infra.cache.SerializableSession;
+import com.vidiun.live.model.aggregation.StatsEvent;
+import com.vidiun.live.model.aggregation.dao.LiveEventDAO;
+import com.vidiun.live.model.aggregation.keys.EventKey;
 
 /**
  *  This is base class represent a live aggregation save functionality

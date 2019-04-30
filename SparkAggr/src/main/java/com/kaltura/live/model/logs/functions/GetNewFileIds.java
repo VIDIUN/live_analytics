@@ -1,4 +1,4 @@
-package com.kaltura.live.model.logs.functions;
+package com.vidiun.live.model.logs.functions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
 import com.datastax.driver.core.exceptions.QueryExecutionException;
-import com.kaltura.live.infra.cache.SerializableSession;
+import com.vidiun.live.infra.cache.SerializableSession;
 
 /**
  *	New log file watcher
@@ -33,7 +33,7 @@ public class GetNewFileIds implements FlatMapFunction<Long, String> {
 		LOG.warn("Start: GetNewFileIds");
 		List<String> allKeys = new ArrayList<String>();
 		
-		String query = "SELECT file_id from kaltura_live.log_files where hour_id = "
+		String query = "SELECT file_id from vidiun_live.log_files where hour_id = "
 					+ hourTimestamp
 					+ ";";
 		

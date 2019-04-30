@@ -1,4 +1,4 @@
-package com.kaltura.city2Location;
+package com.vidiun.city2Location;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -7,8 +7,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import com.kaltura.ip2location.DbAttribtues;
-import com.kaltura.ip2location.Ip2LocationRecord;
+import com.vidiun.ip2location.DbAttribtues;
+import com.vidiun.ip2location.Ip2LocationRecord;
 
 public class CityCoordinatesCreator {
 	

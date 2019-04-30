@@ -1,9 +1,9 @@
-package com.kaltura.live.model.aggregation.keys;
+package com.vidiun.live.model.aggregation.keys;
 
 import java.io.Serializable;
 import java.util.Date;
 
-import com.kaltura.live.model.aggregation.StatsEvent;
+import com.vidiun.live.model.aggregation.StatsEvent;
 
 /**
  * This class is a base class for all event keys

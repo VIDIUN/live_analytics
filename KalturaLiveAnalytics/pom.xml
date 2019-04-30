@@ -5,19 +5,19 @@
 		<projectVersion>1.0</projectVersion>
 	</properties>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>kaltura</groupId>
+	<groupId>vidiun</groupId>
 	<artifactId>live-analytics</artifactId>
 	<version>${projectVersion}.${buildNumber}</version>
-	<name>KalturaLiveAnalytics</name>
+	<name>VidiunLiveAnalytics</name>
 	<packaging>war</packaging>
 	<dependencies>
 		<dependency>
-			<groupId>kaltura</groupId>
+			<groupId>vidiun</groupId>
 			<artifactId>live-infra</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>kaltura</groupId>
+			<groupId>vidiun</groupId>
 			<artifactId>live-model</artifactId>
 			<version>${project.version}</version>
 		</dependency>

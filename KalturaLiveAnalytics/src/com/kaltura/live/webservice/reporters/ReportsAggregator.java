@@ -1,6 +1,6 @@
-package com.kaltura.live.webservice.reporters;
+package com.vidiun.live.webservice.reporters;
 
-import com.kaltura.live.webservice.model.LiveStats;
+import com.vidiun.live.webservice.model.LiveStats;
 
 public class ReportsAggregator {
 	

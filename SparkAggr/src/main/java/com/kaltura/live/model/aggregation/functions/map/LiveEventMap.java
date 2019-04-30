@@ -1,9 +1,9 @@
-package com.kaltura.live.model.aggregation.functions.map;
+package com.vidiun.live.model.aggregation.functions.map;
 
 import org.apache.spark.api.java.function.PairFunction;
 
-import com.kaltura.live.model.aggregation.StatsEvent;
-import com.kaltura.live.model.aggregation.keys.EventKey;
+import com.vidiun.live.model.aggregation.StatsEvent;
+import com.vidiun.live.model.aggregation.keys.EventKey;
 
 /**
  *  This is base class represent a live aggregation functionality

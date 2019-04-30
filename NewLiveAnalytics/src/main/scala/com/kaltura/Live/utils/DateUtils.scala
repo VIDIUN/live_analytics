@@ -1,4 +1,4 @@
-package com.kaltura.Live.utils
+package com.vidiun.Live.utils
 
 import java.text.{ParseException, SimpleDateFormat}
 import java.util.{Calendar, Date}

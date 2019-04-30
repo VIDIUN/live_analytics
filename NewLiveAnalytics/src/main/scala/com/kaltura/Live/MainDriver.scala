@@ -1,15 +1,15 @@
-package com.kaltura.Live
+package com.vidiun.Live
 
 import com.datastax.driver.core.exceptions.DriverException
 import com.datastax.spark.connector._
 import com.datastax.spark.connector.writer.{TTLOption, WriteConf}
 import com.google.common.base.Charsets
 import com.google.common.io.Resources
-import com.kaltura.Live.infra.{ConfigurationManager, EventsGenerator, SerializedSession}
-import com.kaltura.Live.model.LiveEvent
-import com.kaltura.Live.model.aggregation.processors.PeakAudienceNewProcessor
-import com.kaltura.Live.model.purge.DataCleaner
-import com.kaltura.Live.utils.{BaseLog, MetaLog}
+import com.vidiun.Live.infra.{ConfigurationManager, EventsGenerator, SerializedSession}
+import com.vidiun.Live.model.LiveEvent
+import com.vidiun.Live.model.aggregation.processors.PeakAudienceNewProcessor
+import com.vidiun.Live.model.purge.DataCleaner
+import com.vidiun.Live.utils.{BaseLog, MetaLog}
 import org.apache.spark.SparkContext._
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
@@ -45,7 +45,7 @@ object MainDriver extends MetaLog[BaseLog]
           "slf4j-api-1.6.4.jar",
           "jsr166e-1.1.0.jar")
 
-     val keyspace = "kaltura_live"
+     val keyspace = "vidiun_live"
 
      val baseFieldsList  = List(
           "event_time",

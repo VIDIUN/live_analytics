@@ -4,7 +4,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		<buildNumber>0</buildNumber>
 		<projectVersion>1.0</projectVersion>
 	</properties>
-  <groupId>kaltura</groupId>
+  <groupId>vidiun</groupId>
   <artifactId>ip-2-location</artifactId>
   <modelVersion>4.0.0</modelVersion>
   <name>IP2Location</name>

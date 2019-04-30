@@ -1,8 +1,8 @@
-package com.kaltura.live.model.aggregation.functions.reduce;
+package com.vidiun.live.model.aggregation.functions.reduce;
 
 import org.apache.spark.api.java.function.Function2;
 
-import com.kaltura.live.model.aggregation.StatsEvent;
+import com.vidiun.live.model.aggregation.StatsEvent;
 
 
 public class LiveEventMaxAudience implements Function2<StatsEvent, StatsEvent, StatsEvent> {

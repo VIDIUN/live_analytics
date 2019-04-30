@@ -1,10 +1,10 @@
-package com.kaltura.Live.model.aggregation.processors
+package com.vidiun.Live.model.aggregation.processors
 
-import com.kaltura.Live.MainDriver
-import com.kaltura.Live.infra.SerializedSession
-import com.kaltura.Live.model.LiveEvent
-import com.kaltura.Live.model.dao.{EntryHourlyPeakAudience, EntryHourlyPeakAudienceCF}
-import com.kaltura.Live.utils.DateUtils
+import com.vidiun.Live.MainDriver
+import com.vidiun.Live.infra.SerializedSession
+import com.vidiun.Live.model.LiveEvent
+import com.vidiun.Live.model.dao.{EntryHourlyPeakAudience, EntryHourlyPeakAudienceCF}
+import com.vidiun.Live.utils.DateUtils
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
 

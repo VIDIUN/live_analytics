@@ -1,4 +1,4 @@
-package com.kaltura.live.model.aggregation;
+package com.vidiun.live.model.aggregation;
 
 /**
  * Created by didi on 1/25/15.

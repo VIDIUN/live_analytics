@@ -1,9 +1,9 @@
-package com.kaltura.Live.infra
+package com.vidiun.Live.infra
 
 import com.datastax.driver.core.Cluster
-import com.kaltura.Live.env.EnvParams
-import com.kaltura.Live.model.dao.{LoggedData, LoggedDataCF}
-import com.kaltura.Live.utils.{BaseLog, MetaLog}
+import com.vidiun.Live.env.EnvParams
+import com.vidiun.Live.model.dao.{LoggedData, LoggedDataCF}
+import com.vidiun.Live.utils.{BaseLog, MetaLog}
 
 import scala.concurrent.Await
 
@@ -18,15 +18,15 @@ object EventsFileExtractor extends Serializable with MetaLog[BaseLog]
      }
 
 //     val cluster = Cluster.builder().addContactPoint(EnvParams.cassandraAddress).build()
-//     val session = cluster.connect(EnvParams.kalturaKeySpace)
+//     val session = cluster.connect(EnvParams.vidiunKeySpace)
 
      def fileIdToLines( fileId: String ) : List[String] =
      {
-          //val rdd: SchemaRDD = cc.sql( "SELECT data from kaltura_live.log_data WHERE file_id='" + fileId + "'" )
+          //val rdd: SchemaRDD = cc.sql( "SELECT data from vidiun_live.log_data WHERE file_id='" + fileId + "'" )
           // val lines = rdd.flatMap(row => blobToLines(row(0) ) ).collect().toList
 
 //          val cluster = Cluster.builder().addContactPoint(EnvParams.cassandraAddress).build()
-//          val session = cluster.connect(EnvParams.kalturaKeySpace)
+//          val session = cluster.connect(EnvParams.vidiunKeySpace)
 
           val loggedDataCF = new LoggedDataCF(SerializedSession.session)
 

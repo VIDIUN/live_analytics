@@ -1,4 +1,4 @@
-package com.kaltura.live.infra.utils;
+package com.vidiun.live.infra.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;

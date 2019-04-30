@@ -1,4 +1,4 @@
-package com.kaltura.Live.infra
+package com.vidiun.Live.infra
 
 import java.io.{FileInputStream, InputStream}
 import java.util.Properties
@@ -18,9 +18,9 @@ object ConfigurationManager {
   loadConfiguration(configFilePath);
 
   protected def configFilePath: String = {
-    var confPath: String = "/opt/kaltura/lib"
-    if (System.getenv.containsKey("KALTURA_CONF_PATH")) {
-      confPath = System.getenv("KALTURA_CONF_PATH")
+    var confPath: String = "/opt/vidiun/lib"
+    if (System.getenv.containsKey("VIDIUN_CONF_PATH")) {
+      confPath = System.getenv("VIDIUN_CONF_PATH")
     }
     return confPath + "/config.properties"
   }

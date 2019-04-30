@@ -1,4 +1,4 @@
-package com.kaltura.Live.utils
+package com.vidiun.Live.utils
 
 import org.slf4j.LoggerFactory
 

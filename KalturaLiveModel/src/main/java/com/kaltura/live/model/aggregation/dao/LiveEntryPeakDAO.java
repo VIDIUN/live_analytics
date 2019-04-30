@@ -1,4 +1,4 @@
-package com.kaltura.live.model.aggregation.dao;
+package com.vidiun.live.model.aggregation.dao;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -9,8 +9,8 @@ import org.slf4j.LoggerFactory;
 
 import com.datastax.driver.core.BoundStatement;
 import com.datastax.driver.core.Row;
-import com.kaltura.live.infra.cache.SerializableSession;
-import com.kaltura.live.model.aggregation.StatsEvent;
+import com.vidiun.live.infra.cache.SerializableSession;
+import com.vidiun.live.model.aggregation.StatsEvent;
 
 public class LiveEntryPeakDAO extends LiveEventDAO {
 
@@ -40,7 +40,7 @@ public class LiveEntryPeakDAO extends LiveEventDAO {
 	
 	@Override
 	protected String getTableName() {
-		return "kaltura_live.live_entry_hourly_peak";
+		return "vidiun_live.live_entry_hourly_peak";
 	}
 	
 	

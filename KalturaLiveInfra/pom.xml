@@ -5,7 +5,7 @@
 		<buildNumber>0</buildNumber>
 		<projectVersion>1.0</projectVersion>
 	</properties>
-	<groupId>kaltura</groupId>
+	<groupId>vidiun</groupId>
 	<artifactId>live-infra</artifactId>
 	<version>${projectVersion}.${buildNumber}</version>
 	<repositories>
@@ -47,5 +47,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	<name>KalturaLiveInfra</name>
+	<name>VidiunLiveInfra</name>
 </project>

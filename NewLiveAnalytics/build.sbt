@@ -7,7 +7,7 @@ val buildVersion = sys.props.getOrElse("buildVersion", default = "0")
 
 version := projectVersion + "." + buildVersion
 
-organization := "kaltura"
+organization := "vidiun"
 
 scalaVersion := "2.10.5"
 

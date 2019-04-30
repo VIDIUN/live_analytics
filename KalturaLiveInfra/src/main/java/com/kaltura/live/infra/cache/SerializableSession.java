@@ -1,4 +1,4 @@
-package com.kaltura.live.infra.cache;
+package com.vidiun.live.infra.cache;
 
 import java.io.Externalizable;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import com.datastax.driver.core.Session;
 import com.datastax.driver.core.Statement;
 import com.datastax.driver.core.exceptions.DriverException;
-import com.kaltura.live.infra.exception.KalturaInternalException;
+import com.vidiun.live.infra.exception.VidiunInternalException;
 
 public class SerializableSession implements Externalizable {
 	
@@ -44,7 +44,7 @@ public class SerializableSession implements Externalizable {
 		return session;
 	}
 	
-	public void execute(Statement statement, int retries) throws KalturaInternalException {
+	public void execute(Statement statement, int retries) throws VidiunInternalException {
 		int retriesCount = 0;
 		boolean success = false;
 		do {
@@ -55,7 +55,7 @@ public class SerializableSession implements Externalizable {
 			} catch (DriverException e) {
 				if (retriesCount >= retries) {
 					LOG.error("Failed to execute statement after " + retries + "retries with the following exception: " + e.getMessage()) ;
-					throw new KalturaInternalException(e);
+					throw new VidiunInternalException(e);
 				}
 				LOG.warn("Failed to execute statement, try #" + retriesCount + "with the following exception: "+ e.getMessage()) ;
 			}

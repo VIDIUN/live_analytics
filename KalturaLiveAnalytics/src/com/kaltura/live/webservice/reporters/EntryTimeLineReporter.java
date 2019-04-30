@@ -1,4 +1,4 @@
-package com.kaltura.live.webservice.reporters;
+package com.vidiun.live.webservice.reporters;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -6,13 +6,13 @@ import java.util.List;
 
 import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
-import com.kaltura.live.infra.utils.DateUtils;
-import com.kaltura.live.model.aggregation.dao.LiveEntryEventDAO;
-import com.kaltura.live.webservice.model.AnalyticsException;
-import com.kaltura.live.webservice.model.LiveEventsListResponse;
-import com.kaltura.live.webservice.model.LiveReportInputFilter;
-import com.kaltura.live.webservice.model.LiveReportPager;
-import com.kaltura.live.webservice.model.LiveStatsListResponse;
+import com.vidiun.live.infra.utils.DateUtils;
+import com.vidiun.live.model.aggregation.dao.LiveEntryEventDAO;
+import com.vidiun.live.webservice.model.AnalyticsException;
+import com.vidiun.live.webservice.model.LiveEventsListResponse;
+import com.vidiun.live.webservice.model.LiveReportInputFilter;
+import com.vidiun.live.webservice.model.LiveReportPager;
+import com.vidiun.live.webservice.model.LiveStatsListResponse;
 
 public class EntryTimeLineReporter extends BaseReporter {
 	
@@ -38,7 +38,7 @@ public class EntryTimeLineReporter extends BaseReporter {
 
 	private String generateQuery(LiveReportInputFilter filter) {
 		StringBuffer sb = new StringBuffer();
-		sb.append("select * from kaltura_live.live_events where ");
+		sb.append("select * from vidiun_live.live_events where ");
 		sb.append(addEntryIdsCondition(filter.getEntryIds()));
 		sb.append(" and ");
 		sb.append(addTimeRangeCondition(

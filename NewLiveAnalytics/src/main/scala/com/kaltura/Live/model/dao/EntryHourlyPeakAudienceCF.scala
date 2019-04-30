@@ -1,7 +1,7 @@
-package com.kaltura.Live.model.dao
+package com.vidiun.Live.model.dao
 
-import com.kaltura.Live.infra.SerializedSession
-import com.kaltura.Live.model.{LiveEvent}
+import com.vidiun.Live.infra.SerializedSession
+import com.vidiun.Live.model.{LiveEvent}
 import eu.inn.binders._
 import eu.inn.binders.cassandra._
 import eu.inn.binders.naming.PlainConverter

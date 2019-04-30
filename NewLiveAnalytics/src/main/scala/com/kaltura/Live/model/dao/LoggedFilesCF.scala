@@ -1,4 +1,4 @@
-package com.kaltura.Live.model.dao
+package com.vidiun.Live.model.dao
 
 import eu.inn.binders._
 import eu.inn.binders.cassandra._

@@ -1,4 +1,4 @@
-package com.kaltura.Live.env
+package com.vidiun.Live.env
 
 object EnvParams
 {

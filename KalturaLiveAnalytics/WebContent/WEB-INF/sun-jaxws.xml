@@ -4,6 +4,6 @@
   version="2.0">
   <endpoint
       name="LiveAnalytics"
-      implementation="com.kaltura.live.webservice.LiveAnalyticsImpl"
-      url-pattern="/KalturaLiveAnalytics"/>
+      implementation="com.vidiun.live.webservice.LiveAnalyticsImpl"
+      url-pattern="/VidiunLiveAnalytics"/>
 </endpoints>

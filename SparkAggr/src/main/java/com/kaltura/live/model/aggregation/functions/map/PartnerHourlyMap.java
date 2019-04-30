@@ -1,11 +1,11 @@
-package com.kaltura.live.model.aggregation.functions.map;
+package com.vidiun.live.model.aggregation.functions.map;
 
 import scala.Tuple2;
 
-import com.kaltura.live.infra.utils.DateUtils;
-import com.kaltura.live.model.aggregation.StatsEvent;
-import com.kaltura.live.model.aggregation.keys.EventKey;
-import com.kaltura.live.model.aggregation.keys.PartnerHourlyKey;
+import com.vidiun.live.infra.utils.DateUtils;
+import com.vidiun.live.model.aggregation.StatsEvent;
+import com.vidiun.live.model.aggregation.keys.EventKey;
+import com.vidiun.live.model.aggregation.keys.PartnerHourlyKey;
 
 public class PartnerHourlyMap extends LiveEventMap {
 

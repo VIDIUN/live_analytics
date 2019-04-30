@@ -1,4 +1,4 @@
-package com.kaltura.live.infra.cache;
+package com.vidiun.live.infra.cache;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +10,7 @@ import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.Metadata;
 import com.datastax.driver.core.Session;
 import com.datastax.driver.core.exceptions.DriverException;
-import com.kaltura.live.infra.exception.KalturaInternalException;
+import com.vidiun.live.infra.exception.VidiunInternalException;
 
 public class SessionsCache {
 	
@@ -20,7 +20,7 @@ public class SessionsCache {
 	private static Logger LOG = LoggerFactory.getLogger(SessionsCache.class);
 
 	
-	public static Session getSession(String node) throws KalturaInternalException {
+	public static Session getSession(String node) throws VidiunInternalException {
 		if (!sessions.containsKey(node)) 
 			connect(node);
 		
@@ -28,7 +28,7 @@ public class SessionsCache {
 		
 	}
 	
-	private static void connect(String node) throws KalturaInternalException {
+	private static void connect(String node) throws VidiunInternalException {
 		try {
 	        Cluster cluster = Cluster.builder().addContactPoint(node).build();
 	        
@@ -36,7 +36,7 @@ public class SessionsCache {
 	        clusters.put(node, cluster);
 	        sessions.put(node, cluster.connect());
 		} catch (Exception ex) {
-			throw new KalturaInternalException("Failed to connect to host [" + node + "]", ex);
+			throw new VidiunInternalException("Failed to connect to host [" + node + "]", ex);
 		}
 	}
 	    

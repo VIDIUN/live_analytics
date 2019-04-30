@@ -1,6 +1,6 @@
-package com.kaltura.country2location;
+package com.vidiun.country2location;
 
-import com.kaltura.ip2location.Coordinate;
+import com.vidiun.ip2location.Coordinate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

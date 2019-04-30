@@ -1,4 +1,4 @@
-package com.kaltura.live.model.logs.functions;
+package com.vidiun.live.model.logs.functions;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -15,8 +15,8 @@ import org.slf4j.LoggerFactory;
 
 import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
-import com.kaltura.live.infra.cache.SerializableSession;
-import com.kaltura.live.infra.utils.LiveConfiguration;
+import com.vidiun.live.infra.cache.SerializableSession;
+import com.vidiun.live.infra.utils.LiveConfiguration;
 
 public class LoadNewFiles implements FlatMapFunction<String, String> {
 
@@ -34,7 +34,7 @@ public class LoadNewFiles implements FlatMapFunction<String, String> {
 
 		byte[] fileData = null;
 		
-		String q1 = "SELECT * FROM kaltura_live.log_data WHERE file_id = '"
+		String q1 = "SELECT * FROM vidiun_live.log_data WHERE file_id = '"
 				+ fileId + "';";
 
 		LOG.warn("LoadNewFiles: before get file data from cassandra");

@@ -51,5 +51,5 @@ Class-Path: commons-configuration-1.6.jar spark-streaming_2.10-1.2.2.j
  y-util-8.1.14.v20131031.jar joda-convert-1.2.jar libthrift-0.9.2.jar 
  javax.inject-1.jar jackson-annotations-2.3.0.jar protobuf-java-2.5.0-
  spark.jar commons-lang3-3.3.2.jar config-1.2.1.jar
-Main-Class: com.kaltura.Live.MainDriver
+Main-Class: com.vidiun.Live.MainDriver
 

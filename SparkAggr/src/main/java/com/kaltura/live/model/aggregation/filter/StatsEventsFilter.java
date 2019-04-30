@@ -1,10 +1,10 @@
-package com.kaltura.live.model.aggregation.filter;
+package com.vidiun.live.model.aggregation.filter;
 
 import java.util.Date;
 import org.apache.spark.api.java.function.Function;
 
-import com.kaltura.live.model.aggregation.StatsEvent;
-import com.kaltura.live.model.aggregation.keys.EventKey;
+import com.vidiun.live.model.aggregation.StatsEvent;
+import com.vidiun.live.model.aggregation.keys.EventKey;
 
 import scala.Tuple2;
 
